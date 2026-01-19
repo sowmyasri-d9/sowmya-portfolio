@@ -1,5 +1,48 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Mail, Phone, Linkedin, ExternalLink, Award, Briefcase, GraduationCap, Code, ChevronDown, Github, Youtube, Brain, Sparkles, Zap, Database, Network } from 'lucide-react';
+import {
+  Menu,
+  X,
+  Mail,
+  Phone, Linkedin, ExternalLink, Award, Briefcase, GraduationCap, Code, ChevronDown, Github, Youtube, Brain, Sparkles, Zap, Database, Network
+} from 'lucide-react';
+
+const experiences = [
+  {
+    title: 'Generative AI Engineer',
+    company: 'Travelers',
+    location: 'Hartford, CT, USA',
+    period: 'May 2025 - Present',
+    achievements: [
+      'Architected and deployed LLM-based applications for underwriting and claims workflows.',
+      'Built RAG pipelines using LangChain and Pinecone, improving retrieval accuracy by ~30%.',
+      'Designed prompt orchestration and agentic workflows, reducing manual processing time by ~40%.',
+      'Fine-tuned transformer models (BERT, T5) achieving up to 94% F1-score on 10K+ monthly documents.',
+      'Deployed scalable AI microservices using FastAPI and Docker across Azure and AWS with 99.9% uptime.'
+    ]
+  },
+  {
+    title: 'Machine Learning Engineer',
+    company: 'Crowe Global',
+    location: 'Hartford, Connecticut, USA',
+    period: 'Sep 2024 - Apr 2025',
+    achievements: [
+      'Developed end-to-end ML pipelines using Python and Spark, reducing data preprocessing latency by 25%.',
+      'Built and optimized classification and forecasting models using PyTorch for audit automation use cases.',
+      'Implemented MLOps workflows with MLflow, shortening model deployment cycles by 2 weeks.'
+    ]
+  },
+  {
+    title: 'Backend Developer (Data & ML Systems)',
+    company: 'Barclays (Accenture)',
+    location: 'Hyderabad, India',
+    period: 'Mar 2022 - Dec 2023',
+    achievements: [
+      'Built & maintained backend APIs using Python & Flask/FastAPI to support fraud detection & risk analytics workflows.',
+      'Developed automated ETL pipelines using SQL, PL/SQL, & Python to process large-scale banking & transactional data.',
+      'Integrated machine learning models into backend services, contributing to identification of $150k+ in potential fraud.'
+    ]
+  }
+];
 
 // Animated Neural Network Background Component
 const NeuralNetworkBg = () => {
@@ -87,18 +130,18 @@ const Navigation = ({ activeSection, scrollToSection }) => {
     { id: 'skills', label: 'Skills' },
     { id: 'education', label: 'Education' },
     { id: 'publications', label: 'Publications' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'contact', label: 'Contact' },
+    { id: 'about1', label: 'About 1' }
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-xl' : 'bg-transparent'
-    }`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-xl' : 'bg-transparent'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <button
             onClick={() => scrollToSection('home')}
-            className="flex items-center gap-2 text-xl font-bold text-white hover:text-blue-400 transition-colors group"
+            className="flex items-center gap-2 text-xl cursor-pointer font-bold text-white hover:text-blue-400 transition-colors group"
           >
             <Brain className="group-hover:rotate-12 transition-transform" size={28} />
             <span className="hidden sm:inline">SSP</span>
@@ -110,11 +153,10 @@ const Navigation = ({ activeSection, scrollToSection }) => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                  activeSection === item.id
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
-                }`}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${activeSection === item.id
+                  ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+                  }`}
               >
                 {item.label}
               </button>
@@ -140,11 +182,10 @@ const Navigation = ({ activeSection, scrollToSection }) => {
                   scrollToSection(item.id);
                   setIsMenuOpen(false);
                 }}
-                className={`block w-full text-left px-4 py-3 transition-all ${
-                  activeSection === item.id
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
-                }`}
+                className={`block w-full text-left px-4 py-3 transition-all ${activeSection === item.id
+                  ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+                  }`}
               >
                 {item.label}
               </button>
@@ -207,8 +248,8 @@ const HeroSection = ({ isVisible, scrollToSection }) => {
               <span className="text-blue-300 text-sm font-medium">Available for opportunities</span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
-              Sowmya Sri <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Pandi</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+              SOWMYA SRI PANDI
             </h1>
 
             <div className="space-y-4">
@@ -217,7 +258,7 @@ const HeroSection = ({ isVisible, scrollToSection }) => {
               </h2>
               <div className="h-8 flex items-center">
                 <p className="text-xl text-gray-300 font-mono">
-                  {text}<span className="animate-pulse">|</span>
+                  {text}
                 </p>
               </div>
             </div>
@@ -253,8 +294,8 @@ const HeroSection = ({ isVisible, scrollToSection }) => {
               </div>
               <div className="w-px h-12 bg-gray-600" />
               <div className="text-center">
-                <div className="text-3xl font-bold text-white">15+</div>
-                <div className="text-sm text-gray-400">AI Projects</div>
+                <div className="text-3xl font-bold text-white">5+</div>
+                <div className="text-sm text-gray-400">Projects</div>
               </div>
               <div className="w-px h-12 bg-gray-600" />
               <div className="text-center">
@@ -328,6 +369,8 @@ const AboutSection = ({ isVisible }) => {
 
 // Experience Card Component
 const ExperienceCard = ({ job, index, isVisible }) => {
+  const [showAchievements, setShowAchievements] = useState(false);
+
   return (
     <div
       className={`relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 sm:p-8 shadow-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
@@ -344,58 +387,34 @@ const ExperienceCard = ({ job, index, isVisible }) => {
           <p className="text-gray-400 text-sm">{job.location} | {job.period}</p>
         </div>
       </div>
-      <ul className="space-y-2 ml-16">
-        {job.achievements.map((achievement, i) => (
-          <li key={i} className="text-gray-300 flex items-start">
-            <span className="text-blue-400 mr-2">▸</span>
-            <span>{achievement}</span>
-          </li>
-        ))}
-      </ul>
+
+      <button
+        onClick={() => setShowAchievements(!showAchievements)}
+        className="flex items-center cursor-pointer gap-2 ml-16 px-4 py-2 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-400/50 hover:border-blue-400 rounded-lg text-blue-400 font-semibold transition-all duration-300 group"
+      >
+        <span>More Info</span>
+        <ChevronDown
+          size={18}
+          className={`transition-transform duration-300 ${showAchievements ? 'rotate-180' : ''}`}
+        />
+      </button>
+
+      {showAchievements && (
+        <ul className="space-y-2 ml-16 mt-4">
+          {job.achievements.map((achievement, i) => (
+            <li key={i} className="text-gray-300 flex items-start animate-in fade-in duration-300">
+              <span className="text-blue-400 mr-2">▸</span>
+              <span>{achievement}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
 
 // Experience Section Component
 const ExperienceSection = ({ isVisible }) => {
-  const experiences = [
-    {
-      title: 'Generative AI Engineer',
-      company: 'Travelers',
-      location: 'Hartford, CT, USA',
-      period: 'May 2025 - Present',
-      achievements: [
-        'Architected and deployed LLM-based applications for underwriting and claims workflows.',
-        'Built RAG pipelines using LangChain and Pinecone, improving retrieval accuracy by ~30%.',
-        'Designed prompt orchestration and agentic workflows, reducing manual processing time by ~40%.',
-        'Fine-tuned transformer models (BERT, T5) achieving up to 94% F1-score on 10K+ monthly documents.',
-        'Deployed scalable AI microservices using FastAPI and Docker across Azure and AWS with 99.9% uptime.'
-      ]
-    },
-    {
-      title: 'Machine Learning Engineer',
-      company: 'Crowe Global',
-      location: 'Hartford, Connecticut, USA',
-      period: 'Sep 2024 - Apr 2025',
-      achievements: [
-        'Developed end-to-end ML pipelines using Python and Spark, reducing data preprocessing latency by 25%.',
-        'Built and optimized classification and forecasting models using PyTorch for audit automation use cases.',
-        'Implemented MLOps workflows with MLflow, shortening model deployment cycles by 2 weeks.'
-      ]
-    },
-    {
-      title: 'Data Scientist',
-      company: 'Barclays (Accenture)',
-      location: 'Hyderabad, India',
-      period: 'Mar 2022 - Dec 2023',
-      achievements: [
-        'Developed fraud detection and risk models using Scikit-learn and XGBoost, identifying $150k+ in potential fraud.',
-        'Automated large-scale ETL workflows using SQL and PL/SQL, improving data ingestion speed by 50%.',
-        'Built NLP pipelines for text classification and sentiment analysis to support retail banking insights.'
-      ]
-    }
-  ];
-
   return (
     <section id="experience" className="py-20 bg-gray-950">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -412,51 +431,124 @@ const ExperienceSection = ({ isVisible }) => {
   );
 };
 
-// Project Card Component
-const ProjectCard = ({ project, index, isVisible }) => {
+// Dialog Component
+const Dialog = ({ isOpen, onClose, title, children }) => {
+  if (!isOpen) return null;
+
   return (
     <div
-      className={`group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 shadow-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/20 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
-      style={{ transitionDelay: `${index * 150}ms` }}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+      onClick={onClose}
     >
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-
-      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">{project.title}</h3>
-      <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
-
-      <div className="flex flex-wrap gap-2 mb-4">
-        {project.tags.map((tag, i) => (
-          <span key={i} className="px-3 py-1 bg-blue-500/10 border border-blue-500/30 text-blue-400 text-sm rounded-full font-medium backdrop-blur-sm">
-            {tag}
-          </span>
-        ))}
-      </div>
-
-      <div className="flex flex-wrap gap-3">
-        {project.github && (
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
-          >
-            <Github size={18} />
-            GitHub
-          </a>
-        )}
-        {project.demo && (
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white rounded-lg transition-colors"
-          >
-            <Youtube size={18} />
-            Demo
-          </a>
-        )}
+      <div
+        className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 max-w-2xl w-full mx-4 border border-gray-700 shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+        >
+          <X size={24} />
+        </button>
+        <h3 className="text-2xl font-bold text-white mb-4 pr-8">{title}</h3>
+        <div className="text-gray-300 leading-relaxed">
+          {children}
+        </div>
       </div>
     </div>
+  );
+};
+
+// Project Card Component
+const ProjectCard = ({ project, index, isVisible }) => {
+  const [showDescriptionDialog, setShowDescriptionDialog] = useState(false);
+  const [showNoDemoDialog, setShowNoDemoDialog] = useState(false);
+
+  const handleDemoClick = (e) => {
+    e.preventDefault();
+    // Check if demo URL is just youtube.com or doesn't have a video ID
+    const isValidDemo = project.demo &&
+      project.demo !== 'https://youtube.com' &&
+      !project.demo.match(/^https?:\/\/(www\.)?youtube\.com\/?$/);
+
+    if (isValidDemo) {
+      window.open(project.demo, '_blank', 'noopener,noreferrer');
+    } else {
+      setShowNoDemoDialog(true);
+    }
+  };
+
+  // Truncate description to approximately 2 lines (around 120 characters)
+  const truncatedDescription = project.description.length > 120
+    ? project.description.substring(0, 120) + '...'
+    : project.description;
+
+  const needsShowMore = project.description.length > 120;
+
+  return (
+    <>
+      <div
+        className={`group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 shadow-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/20 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+        style={{ transitionDelay: `${index * 150}ms` }}
+      >
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+
+        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">{project.title}</h3>
+
+        <div className="mb-4">
+          <p className="text-gray-300 leading-relaxed">{truncatedDescription}</p>
+          {needsShowMore && (
+            <button
+              onClick={() => setShowDescriptionDialog(true)}
+              className="text-blue-400 cursor-pointer hover:text-blue-300 text-sm font-medium mt-2 transition-colors"
+            >
+              Show More
+            </button>
+          )}
+        </div>
+
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project.tags.map((tag, i) => (
+            <span key={i} className="px-3 py-1 bg-blue-500/10 border border-blue-500/30 text-blue-400 text-sm rounded-full font-medium backdrop-blur-sm">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex justify-center flex-wrap gap-3">
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
+            >
+              <Github size={18} />
+              GitHub
+            </a>
+          )}
+
+        </div>
+      </div>
+
+      {/* Description Dialog */}
+      <Dialog
+        isOpen={showDescriptionDialog}
+        onClose={() => setShowDescriptionDialog(false)}
+        title={project.title}
+      >
+        <p>{project.description}</p>
+      </Dialog>
+
+      {/* No Demo Dialog */}
+      <Dialog
+        isOpen={showNoDemoDialog}
+        onClose={() => setShowNoDemoDialog(false)}
+        title="Demo Not Available"
+      >
+        <p>No demo video is currently available for this project.</p>
+      </Dialog>
+    </>
   );
 };
 
@@ -464,51 +556,37 @@ const ProjectCard = ({ project, index, isVisible }) => {
 const ProjectsSection = ({ isVisible }) => {
   const projects = [
     {
-      title: 'RAG-Based Document Assistant',
-      description: 'Built an intelligent document retrieval system using LangChain and Pinecone for enterprise knowledge management. Implemented semantic search with custom embeddings achieving 92% accuracy.',
-      tags: ['LangChain', 'Pinecone', 'FastAPI', 'Docker', 'Azure'],
-      github: 'https://github.com',
+      title: 'AI-Document-Summarizer',
+      description: 'A modern AI-powered web app that summarizes PDF, DOCX, and TXT documents in seconds. Generate high-quality summaries with customizable length, live preview, detailed statistics, and export results as DOCX through a clean, responsive interface.',
+      tags: ['React', 'Tailwind CSS', 'FastAPI', 'PyTorch', 'Hugging Face Transformers'],
+      github: 'https://github.com/sowmyasri-d9/AI-Document-Summarizer.git',
+      demo: 'https://youtu.be/Q20RSiPCmik'
+    },
+    {
+      title: 'Detecting Cyber Bullying on Twitter using Support Vector Machine',
+      description: 'On the platform provided by social media, a significant number of young people are subjected to bullying. Cyberbullying is becoming a more widespread problem with the proliferation of social networking platforms. To discover word similarities in the tweets that were written by bullies, utilize Machine Learning, and develop a ML model that can do automatic identification of the bullying acts on different social media websites or platforms. Yet, many other methods for detecting bullying on social media have been deployed, however, the majority of these methods are text-based. The goal of this work is to show how software may be developed that can detect bullying in tweets, postings, and other online communications. It has been suggested to use a model that uses machine learning to identify bullying on Twitter. SVM is used in the classification process, whereas NLP is utilized for the processing of the data. Additionally, in order to decide whether or not a tweet constitutes bullying, the Twitter API is used to gather the tweets, which are then loaded into a model.',
+      tags: ['SVM', 'Python', 'NLP', 'TF-IDF'],
+      github: 'https://github.com/sowmyasri-d9/DETECTING-CYBERBULLYING-TWEETS-USING-MACHINE-LEARNING.git',
       demo: 'https://youtube.com'
     },
     {
-      title: 'Multi-Agent Workflow System',
-      description: 'Developed an agentic AI system using LangGraph for automated insurance claim processing. Orchestrated multiple specialized agents reducing processing time by 40%.',
-      tags: ['LangGraph', 'GPT-4', 'Python', 'AWS Lambda'],
-      github: 'https://github.com',
+      title: 'Wedding Management System',
+      description: 'A comprehensive platform designed to simplify wedding planning by consolidating all essential services in one place. Users can select their cultural preferences, choose an event date, and book venues, catering services, DJs, decorators, and photographers. The system also supports mock credit card payments and allows users to print receipts for their bookings. It aims to streamline the entire wedding planning process, making it efficient and hassle-free for both couples and wedding planners.',
+      tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+      github: 'https://github.com/sowmyasri-d9/wedding-management-.git',
       demo: 'https://youtube.com'
     },
     {
-      title: 'Fine-tuned Transformer for NER',
-      description: 'Fine-tuned BERT model for Named Entity Recognition in financial documents. Achieved 94% F1-score on custom dataset with LoRA optimization techniques.',
-      tags: ['PyTorch', 'Hugging Face', 'BERT', 'LoRA', 'MLflow'],
-      github: 'https://github.com',
+      title: 'DevLink - Developer Portfolio & Links Platform',
+      description: 'A developer resource hub where developers can; Share and categorize useful resources (articles, videos, tools), Bookmark resources, Comment and rate resources, and Search by tags, titles, and categories. DevLink aims to foster a collaborative community for developers to discover and share valuable content, enhancing their learning and productivity.',
+      tags: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Tailwind CSS'],
+      github: 'https://github.com/sowmyasri-d9/Devlopers_resources.git',
       demo: 'https://youtube.com'
     },
-    {
-      title: 'Fraud Detection Pipeline',
-      description: 'Engineered end-to-end ML pipeline for real-time fraud detection using XGBoost and feature engineering. Identified $150K+ in fraudulent transactions.',
-      tags: ['XGBoost', 'Scikit-learn', 'SQL', 'Apache Spark'],
-      github: 'https://github.com',
-      demo: 'https://youtube.com'
-    },
-    {
-      title: 'Sentiment Analysis Dashboard',
-      description: 'Created interactive NLP dashboard for analyzing customer sentiment from social media data. Processed 100K+ tweets daily with real-time visualization.',
-      tags: ['TensorFlow', 'NLP', 'React', 'MongoDB', 'Docker'],
-      github: 'https://github.com',
-      demo: 'https://youtube.com'
-    },
-    {
-      title: 'AI Model Monitoring System',
-      description: 'Implemented comprehensive MLOps monitoring solution for tracking model drift and performance. Reduced deployment cycles by 2 weeks with automated CI/CD.',
-      tags: ['MLflow', 'Kubernetes', 'Prometheus', 'CI/CD'],
-      github: 'https://github.com',
-      demo: 'https://youtube.com'
-    }
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-900">
+    <section id="projects" className="py-20 bg-gray-900 min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className={`text-4xl sm:text-5xl font-bold text-white mb-12 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           Featured <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Projects</span>
@@ -568,6 +646,11 @@ const SkillsSection = ({ isVisible }) => {
       icon: <Zap size={24} />,
       title: 'Cloud Platforms',
       skills: 'Azure AI, AWS (SageMaker, Lambda), GCP'
+    },
+    {
+      icon: <Code size={24} />,
+      title: 'Backend Engineering',
+      skills: 'Python, FastAPI, Flask, Django, REST APIs, Microservices Architecture'
     }
   ];
 
@@ -602,6 +685,7 @@ const EducationSection = ({ isVisible }) => {
               Education
             </h3>
             <div className="space-y-6">
+
               <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 shadow-xl border border-gray-700 hover:border-blue-500/50 transition-all">
                 <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 to-purple-600 rounded-l-xl" />
                 <h4 className="text-lg font-bold text-white">Master's in Computer Science</h4>
@@ -625,11 +709,11 @@ const EducationSection = ({ isVisible }) => {
               <ul className="space-y-3">
                 {[
                   'Generative AI Engineer - IBM',
-                  'Machine Learning Engineer - AWS',
+                  'Machine Learning Engineer – AWS',
                   'Azure AI Engineer - Microsoft',
-                  'Backend Developer Professional - Meta',
+                  'Back-End developer professional – Meta',
                   'Python Programming - Coursera',
-                  'Data Structures and Algorithms (Python) - NPTEL, Silver Badge'
+                  'Data Structures and Algorithms Using Python – NPTEL (Silver badge)',
                 ].map((cert, i) => (
                   <li key={i} className="flex items-start text-gray-300">
                     <span className="text-purple-400 mr-2">✓</span>
@@ -648,12 +732,12 @@ const EducationSection = ({ isVisible }) => {
 // Publications Section Component
 const PublicationsSection = ({ isVisible }) => {
   return (
-    <section id="publications" className="py-20 bg-gray-950">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="publications" className="gap-6 py-20 bg-gray-950">      
+      <div className="max-w-6xl mx-auto px-4 gap-6 sm:px-6 lg:px-8">
         <h2 className={`text-4xl sm:text-5xl font-bold text-white mb-12 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Publications</span>
         </h2>
-        <div className={`relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`relative bg-gradient-to-br mb-5 from-gray-800 to-gray-900 rounded-2xl p-8 shadow-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-t-2xl" />
           <h3 className="text-xl font-bold text-white mb-3">
             Detecting Cyber Bullying on Twitter using Support Vector Machine
