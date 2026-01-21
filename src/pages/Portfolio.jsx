@@ -6,6 +6,44 @@ import {
   Phone, Linkedin, ExternalLink, Award, Briefcase, GraduationCap, Code, ChevronDown, Github, Youtube, Brain, Sparkles, Zap, Database, Network
 } from 'lucide-react';
 
+  const projects = [
+    {
+      title: 'AI-Document-Summarizer',
+      description: 'A modern AI-powered web app that summarizes PDF, DOCX, and TXT documents in seconds. Generate high-quality summaries with customizable length, live preview, detailed statistics, and export results as DOCX through a clean, responsive interface.',
+      tags: ['React', 'Tailwind CSS', 'FastAPI', 'PyTorch', 'Hugging Face Transformers'],
+      github: 'https://github.com/sowmyasri-d9/AI-Document-Summarizer.git',
+      demo: 'https://youtu.be/Q20RSiPCmik'
+    },
+    {
+      title: 'Customer Churn Predictor',
+      description: 'Customer churn prediction focused on improving customer retention using machine learning techniques. The system analyzes customer behavior and engagement data to identify churn risk, leveraging models such as Decision Tree, Logistic Regression, Random Forest, and SVM. SMOTE is used to handle class imbalance, with a responsive React JS frontend and a FastAPI backend for efficient model serving and data processing.',
+      tags: ['ML', 'FastAPI', 'React', 'Decision Tree', 'Logistic Regression', 'SVM', 'SMOTE'],
+      github: 'https://github.com/Mbicha/CustomerChurnPredictor.git',
+      demo: 'https://youtu.be/Q20RSiPCmik'
+    },
+    {
+      title: 'Detecting Cyber Bullying on Twitter using Support Vector Machine',
+      description: 'On the platform provided by social media, a significant number of young people are subjected to bullying. Cyberbullying is becoming a more widespread problem with the proliferation of social networking platforms. To discover word similarities in the tweets that were written by bullies, utilize Machine Learning, and develop a ML model that can do automatic identification of the bullying acts on different social media websites or platforms. Yet, many other methods for detecting bullying on social media have been deployed, however, the majority of these methods are text-based. The goal of this work is to show how software may be developed that can detect bullying in tweets, postings, and other online communications. It has been suggested to use a model that uses machine learning to identify bullying on Twitter. SVM is used in the classification process, whereas NLP is utilized for the processing of the data. Additionally, in order to decide whether or not a tweet constitutes bullying, the Twitter API is used to gather the tweets, which are then loaded into a model.',
+      tags: ['SVM', 'Python', 'NLP', 'TF-IDF'],
+      github: 'https://github.com/sowmyasri-d9/DETECTING-CYBERBULLYING-TWEETS-USING-MACHINE-LEARNING.git',
+      demo: 'https://youtube.com'
+    },
+    {
+      title: 'Wedding Management System',
+      description: 'A comprehensive platform designed to simplify wedding planning by consolidating all essential services in one place. Users can select their cultural preferences, choose an event date, and book venues, catering services, DJs, decorators, and photographers. The system also supports mock credit card payments and allows users to print receipts for their bookings. It aims to streamline the entire wedding planning process, making it efficient and hassle-free for both couples and wedding planners.',
+      tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+      github: 'https://github.com/sowmyasri-d9/wedding-management-.git',
+      demo: 'https://youtube.com'
+    },
+    {
+      title: 'DevLink - Developer Portfolio & Links Platform',
+      description: 'A developer resource hub where developers can; Share and categorize useful resources (articles, videos, tools), Bookmark resources, Comment and rate resources, and Search by tags, titles, and categories. DevLink aims to foster a collaborative community for developers to discover and share valuable content, enhancing their learning and productivity.',
+      tags: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Tailwind CSS'],
+      github: 'https://github.com/sowmyasri-d9/Devlopers_resources.git',
+      demo: 'https://youtube.com'
+    },
+  ];
+
 const experiences = [
   {
     title: 'Generative AI Engineer',
@@ -554,36 +592,7 @@ const ProjectCard = ({ project, index, isVisible }) => {
 
 // Projects Section Component
 const ProjectsSection = ({ isVisible }) => {
-  const projects = [
-    {
-      title: 'AI-Document-Summarizer',
-      description: 'A modern AI-powered web app that summarizes PDF, DOCX, and TXT documents in seconds. Generate high-quality summaries with customizable length, live preview, detailed statistics, and export results as DOCX through a clean, responsive interface.',
-      tags: ['React', 'Tailwind CSS', 'FastAPI', 'PyTorch', 'Hugging Face Transformers'],
-      github: 'https://github.com/sowmyasri-d9/AI-Document-Summarizer.git',
-      demo: 'https://youtu.be/Q20RSiPCmik'
-    },
-    {
-      title: 'Detecting Cyber Bullying on Twitter using Support Vector Machine',
-      description: 'On the platform provided by social media, a significant number of young people are subjected to bullying. Cyberbullying is becoming a more widespread problem with the proliferation of social networking platforms. To discover word similarities in the tweets that were written by bullies, utilize Machine Learning, and develop a ML model that can do automatic identification of the bullying acts on different social media websites or platforms. Yet, many other methods for detecting bullying on social media have been deployed, however, the majority of these methods are text-based. The goal of this work is to show how software may be developed that can detect bullying in tweets, postings, and other online communications. It has been suggested to use a model that uses machine learning to identify bullying on Twitter. SVM is used in the classification process, whereas NLP is utilized for the processing of the data. Additionally, in order to decide whether or not a tweet constitutes bullying, the Twitter API is used to gather the tweets, which are then loaded into a model.',
-      tags: ['SVM', 'Python', 'NLP', 'TF-IDF'],
-      github: 'https://github.com/sowmyasri-d9/DETECTING-CYBERBULLYING-TWEETS-USING-MACHINE-LEARNING.git',
-      demo: 'https://youtube.com'
-    },
-    {
-      title: 'Wedding Management System',
-      description: 'A comprehensive platform designed to simplify wedding planning by consolidating all essential services in one place. Users can select their cultural preferences, choose an event date, and book venues, catering services, DJs, decorators, and photographers. The system also supports mock credit card payments and allows users to print receipts for their bookings. It aims to streamline the entire wedding planning process, making it efficient and hassle-free for both couples and wedding planners.',
-      tags: ['React', 'Node.js', 'Express', 'MongoDB'],
-      github: 'https://github.com/sowmyasri-d9/wedding-management-.git',
-      demo: 'https://youtube.com'
-    },
-    {
-      title: 'DevLink - Developer Portfolio & Links Platform',
-      description: 'A developer resource hub where developers can; Share and categorize useful resources (articles, videos, tools), Bookmark resources, Comment and rate resources, and Search by tags, titles, and categories. DevLink aims to foster a collaborative community for developers to discover and share valuable content, enhancing their learning and productivity.',
-      tags: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Tailwind CSS'],
-      github: 'https://github.com/sowmyasri-d9/Devlopers_resources.git',
-      demo: 'https://youtube.com'
-    },
-  ];
+
 
   return (
     <section id="projects" className="py-20 bg-gray-900 min-h-screen">
