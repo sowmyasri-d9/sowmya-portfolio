@@ -46,10 +46,25 @@ import {
 
 const experiences = [
   {
-    title: 'Generative AI Engineer',
+    title: 'Machine Learning Engineer',
+    company: 'Apple',
+    location: 'Cambridge, Massachusetts, USA',
+    period: 'May 2024 - Present',
+    achievements: [
+      'Contributed to AI-based document processing workflows for summarization and information extraction, reducing manual effort.',  
+      'Supported development of NLP and LLM features for document summarization and text classification.',
+      'Assisted in improving search and retrieval systems for better data accessibility.',
+      'Helped build and integrate FastAPI services to connect AI models with backend systems.',
+      'Worked with structured and unstructured data to improve data consistency.',
+      'Participated in testing and validation of model outputs to enhance quality.',
+      'Collaborated with engineering and product teams to refine and implement solutions.'
+    ]
+  },
+  {
+    title: 'AI Engineer',
     company: 'Travelers',
     location: 'Hartford, CT, USA',
-    period: 'May 2025 - Present',
+    period: 'May 2022 - 2024',
     achievements: [
       'Architected and deployed LLM-based applications for underwriting and claims workflows.',
       'Built RAG pipelines using LangChain and Pinecone, improving retrieval accuracy by ~30%.',
@@ -59,21 +74,10 @@ const experiences = [
     ]
   },
   {
-    title: 'Machine Learning Engineer',
-    company: 'Crowe Global',
-    location: 'Hartford, Connecticut, USA',
-    period: 'Sep 2024 - Apr 2025',
-    achievements: [
-      'Developed end-to-end ML pipelines using Python and Spark, reducing data preprocessing latency by 25%.',
-      'Built and optimized classification and forecasting models using PyTorch for audit automation use cases.',
-      'Implemented MLOps workflows with MLflow, shortening model deployment cycles by 2 weeks.'
-    ]
-  },
-  {
     title: 'Backend Developer (Data & ML Systems)',
     company: 'Barclays (Accenture)',
-    location: 'Hyderabad, India',
-    period: 'Mar 2022 - Dec 2023',
+    location: 'Hartford, CT, USA',
+    period: 'Mar 2020 - feb 2022',
     achievements: [
       'Built & maintained backend APIs using Python & Flask/FastAPI to support fraud detection & risk analytics workflows.',
       'Developed automated ETL pipelines using SQL, PL/SQL, & Python to process large-scale banking & transactional data.',
@@ -327,7 +331,7 @@ const HeroSection = ({ isVisible, scrollToSection }) => {
 
             <div className="flex items-center gap-8 pt-4">
               <div className="text-center">
-                <div className="text-3xl font-bold text-white">3+</div>
+                <div className="text-3xl font-bold text-white">5+</div>
                 <div className="text-sm text-gray-400">Years Experience</div>
               </div>
               <div className="w-px h-12 bg-gray-600" />
@@ -397,7 +401,7 @@ const AboutSection = ({ isVisible }) => {
         <div className={`relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 sm:p-12 shadow-2xl border border-gray-700 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-t-2xl" />
           <p className="text-lg text-gray-300 leading-relaxed">
-            Generative AI Engineer with 3+ years of experience specializing in end-to-end development of LLM applications, including RAG pipelines, agentic workflows, and fine-tuning transformer-based architectures. Published IEEE author with a strong research foundation in classical machine learning and NLP, combined with backend engineering experience from Accenture. Proficient in optimizing model performance through vector search and compression, deploying scalable AI microservices using Docker across Azure and AWS, and implementing MLOps best practices to deliver production-grade, reliable, high-impact AI systems.
+            Generative AI Engineer with 5+ years of experience specializing in end-to-end development of LLM applications, including RAG pipelines, agentic workflows, and fine-tuning transformer-based architectures. Published IEEE author with a strong research foundation in classical machine learning and NLP, combined with backend engineering experience from Accenture. Proficient in optimizing model performance through vector search and compression, deploying scalable AI microservices using Docker across Azure and AWS, and implementing MLOps best practices to deliver production-grade, reliable, high-impact AI systems.
           </p>
         </div>
       </div>
@@ -649,12 +653,12 @@ const SkillsSection = ({ isVisible }) => {
     {
       icon: <Network size={24} />,
       title: 'MLOps & Deployment',
-      skills: 'Docker, Kubernetes, MLflow, CI/CD'
+      skills: 'Docker, MLflow, CI/CD'
     },
     {
       icon: <Zap size={24} />,
       title: 'Cloud Platforms',
-      skills: 'Azure AI, AWS (SageMaker, Lambda), GCP'
+      skills: 'Azure AI, AWS (SageMaker, Lambda)'
     },
     {
       icon: <Code size={24} />,
@@ -699,13 +703,13 @@ const EducationSection = ({ isVisible }) => {
                 <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 to-purple-600 rounded-l-xl" />
                 <h4 className="text-lg font-bold text-white">Master's in Computer Science</h4>
                 <p className="text-blue-400 font-semibold">Sacred Heart University</p>
-                <p className="text-gray-400">CT, USA | Jan 2024 - Mar 2025</p>
+                <p className="text-gray-400">CT, USA | Jan 2019 - Mar 2020</p>
               </div>
               <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 shadow-xl border border-gray-700 hover:border-blue-500/50 transition-all">
                 <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 to-purple-600 rounded-l-xl" />
                 <h4 className="text-lg font-bold text-white">B. Tech in Computer Science</h4>
                 <p className="text-blue-400 font-semibold">PVP Siddhartha Institute of Technology</p>
-                <p className="text-gray-400">Aug 2019 - May 2023</p>
+                <p className="text-gray-400">Aug 2014 - May 2018</p>
               </div>
             </div>
           </div>
@@ -787,7 +791,7 @@ const ContactSection = ({ isVisible }) => {
               <div>
                 <p className="text-sm text-gray-400">Email</p>
                 <a href="mailto:sowmyasrip4@gmail.com" className="text-lg font-semibold text-white hover:text-blue-400 transition-colors">
-                  sowmyasrip4@gmail.com
+                  sowmyasripandi@gmail.com
                 </a>
               </div>
             </div>

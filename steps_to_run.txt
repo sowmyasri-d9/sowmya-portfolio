@@ -1,0 +1,13 @@
+npm install
+npm run dev
+
+//git commands
+git add .
+git commit -m '<message>'
+git push
+
+// if git push fails 
+git config --global user.name '<user_name>'
+git config --global user.email '<email>'
+
+
