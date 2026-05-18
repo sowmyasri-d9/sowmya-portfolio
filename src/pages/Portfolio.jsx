@@ -49,7 +49,7 @@ const experiences = [
     title: 'Machine Learning Engineer',
     company: 'Apple',
     location: 'Cambridge, Massachusetts, USA',
-    period: 'May 2024 - Present',
+    period: 'May 2025 - Present',
     achievements: [
       'Contributed to AI-based document processing workflows for summarization and information extraction, reducing manual effort.',  
       'Supported development of NLP and LLM features for document summarization and text classification.',
@@ -64,7 +64,7 @@ const experiences = [
     title: 'AI Engineer',
     company: 'Travelers',
     location: 'Hartford, CT, USA',
-    period: 'May 2022 - 2024',
+    period: 'April 2024 - May 2025',
     achievements: [
       'Architected and deployed LLM-based applications for underwriting and claims workflows.',
       'Built RAG pipelines using LangChain and Pinecone, improving retrieval accuracy by ~30%.',
@@ -74,10 +74,10 @@ const experiences = [
     ]
   },
   {
-    title: 'Backend Developer (Data & ML Systems)',
+    title: 'Backend Developer (Data & ML Systems) - Full Time',
     company: 'Barclays (Accenture)',
-    location: 'Hartford, CT, USA',
-    period: 'Mar 2020 - feb 2022',
+    location: 'Hyderabad, India',
+    period: 'March 2022 - Dec 2023',
     achievements: [
       'Built & maintained backend APIs using Python & Flask/FastAPI to support fraud detection & risk analytics workflows.',
       'Developed automated ETL pipelines using SQL, PL/SQL, & Python to process large-scale banking & transactional data.',
@@ -331,7 +331,7 @@ const HeroSection = ({ isVisible, scrollToSection }) => {
 
             <div className="flex items-center gap-8 pt-4">
               <div className="text-center">
-                <div className="text-3xl font-bold text-white">5+</div>
+                <div className="text-3xl font-bold text-white">4</div>
                 <div className="text-sm text-gray-400">Years Experience</div>
               </div>
               <div className="w-px h-12 bg-gray-600" />
@@ -703,13 +703,13 @@ const EducationSection = ({ isVisible }) => {
                 <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 to-purple-600 rounded-l-xl" />
                 <h4 className="text-lg font-bold text-white">Master's in Computer Science</h4>
                 <p className="text-blue-400 font-semibold">Sacred Heart University</p>
-                <p className="text-gray-400">CT, USA | Jan 2019 - Mar 2020</p>
+                <p className="text-gray-400">CT, USA | Jan 2024 - Mar 2025</p>
               </div>
               <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 shadow-xl border border-gray-700 hover:border-blue-500/50 transition-all">
                 <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 to-purple-600 rounded-l-xl" />
                 <h4 className="text-lg font-bold text-white">B. Tech in Computer Science</h4>
                 <p className="text-blue-400 font-semibold">PVP Siddhartha Institute of Technology</p>
-                <p className="text-gray-400">Aug 2014 - May 2018</p>
+                <p className="text-gray-400">Aug 2019 - May 2023</p>
               </div>
             </div>
           </div>
@@ -801,8 +801,8 @@ const ContactSection = ({ isVisible }) => {
               </div>
               <div>
                 <p className="text-sm text-gray-400">Phone</p>
-                <a href="tel:475-273-2991" className="text-lg font-semibold text-white hover:text-purple-400 transition-colors">
-                  475-273-2991
+                <a href="tel:4752399062" className="text-lg font-semibold text-white hover:text-purple-400 transition-colors">
+                  4752399062
                 </a>
               </div>
             </div>
