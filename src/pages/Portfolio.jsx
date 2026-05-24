@@ -703,13 +703,13 @@ const EducationSection = ({ isVisible }) => {
                 <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 to-purple-600 rounded-l-xl" />
                 <h4 className="text-lg font-bold text-white">Master's in Computer Science</h4>
                 <p className="text-blue-400 font-semibold">Sacred Heart University</p>
-                <p className="text-gray-400">CT, USA | Jan 2022 - Mar 2023</p>
+                <p className="text-gray-400">CT, USA | Jan 2019 - Mar 2020</p>
               </div>
               <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 shadow-xl border border-gray-700 hover:border-blue-500/50 transition-all">
                 <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 to-purple-600 rounded-l-xl" />
                 <h4 className="text-lg font-bold text-white">B. Tech in Computer Science</h4>
                 <p className="text-blue-400 font-semibold">PVP Siddhartha Institute of Technology</p>
-                <p className="text-gray-400">Aug 2017 - May 2021</p>
+                <p className="text-gray-400">Aug 2014 - 2018</p>
               </div>
             </div>
           </div>
